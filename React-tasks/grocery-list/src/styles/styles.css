@@ -1,0 +1,189 @@
+body {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 10%,
+    #8e54e9 51%,
+    #4776e6 90%
+  );
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  background: #1e1e2f;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: white;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.grocery-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.grocery-item span {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+}
+
+.grocery-item span {
+  display: flex;
+  flex: 1;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  padding: 12px 16px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  min-height: 24px;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.grocery-btn {
+  display: flex;
+  gap: 4px;
+  padding: 0;
+  margin-left: 8px;
+}
+
+button.edit-btn,
+button.delete-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+button.edit-btn:hover,
+button.delete-btn:hover {
+  opacity: 0.8;
+}
+
+.add-form {
+  display: flex;
+  margin: 16px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #22283b;
+  border: 1px solid #8e54e9;
+}
+
+.add-form input[type="text"] {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.add-form input::placeholder {
+  color: #757575;
+}
+
+.add-form button {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+}
+.add-form button {
+  padding: 15px 30px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.add-form button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.edit-input {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+}
+.edit-input {
+  flex: 1;
+  padding: 12px 16px;
+  min-height: 24px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+
+.edit-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button.clear-btn {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+}
+button.clear-btn {
+  display: block;
+  font-size: 14px;
+  border: none;
+  margin: 20px auto 0;
+  padding: 12px 25px;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  cursor: pointer;
+  width: auto;
+}
+
+button.clear-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
