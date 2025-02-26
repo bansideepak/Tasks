@@ -34,16 +34,17 @@ const WeatherApp = () => {
     },
   };
 
-  // Load initial cities (only if API key is missing)
+  
   useEffect(() => {
     if (weatherService.API_KEY === "YOUR_API_KEY") {
-      // Use mock data for demo
+      
+      // mock data for demo
       setWeatherData(mockData);
       setCities(Object.keys(mockData));
     }
   }, []);
 
-  // Fetch weather data when cities change
+  // Fetch weather data when cities change 
   useEffect(() => {
     const fetchData = async () => {
       if (cities.length === 0 || weatherService.API_KEY === "YOUR_API_KEY")
@@ -85,7 +86,7 @@ const WeatherApp = () => {
     setCities([...cities, city]);
   };
 
-  // Remove a city
+  // Remove city
   const removeCity = (city) => {
     setCities(cities.filter((c) => c !== city));
 
