@@ -78,7 +78,7 @@ const WeatherApp = () => {
     fetchData();
   }, [cities]);
 
-  // Add a new city
+  // Add city
   const addCity = (city) => {
     if (!city) return;
     if (cities.includes(city)) return;
