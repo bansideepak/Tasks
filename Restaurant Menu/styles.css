@@ -144,7 +144,6 @@ header h1 {
   font-size: 0.95rem;
 }
 
-
 .dietary-info {
   display: inline-flex;
   align-items: center;
@@ -171,7 +170,6 @@ header h1 {
 .spicy-mark {
   background-color: #e74c3c;
 }
-
 
 /* Footer */
 footer {

@@ -96,11 +96,12 @@ nav ul li a:hover {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s box-shadow 0.3s;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .features {
@@ -112,7 +113,6 @@ nav ul li a:hover {
   text-align: center;
   font-size: 36px;
   margin-bottom: 50px;
-  color: #333;
 }
 
 .features-grid {
@@ -127,12 +127,12 @@ nav ul li a:hover {
   margin: 5px;
   border-radius: 10px;
   text-align: center;
-  transition: transform 0.3s;
-
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .feature-icon {
@@ -151,7 +151,6 @@ nav ul li a:hover {
   margin-bottom: 15px;
   font-size: 20px;
 }
-
 
 footer {
   background-color: #333;
