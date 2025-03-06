@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: linear-gradient(to right, rgba(130, 196, 115, 0.8), rgb(255, 116, 116, 0.8));
+}
+
+/* Main Container Styles */
+.counter-wrapper {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.counter-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 350px;
+}
+
+/* Title Styles */
+.counter-title {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Counter Display Styles */
+.counter-display {
+  margin-bottom: 2rem;
+}
+
+.counter-value {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #2563eb;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.counter-limits {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Controls Section Styles */
+.counter-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Button Styles */
+.counter-btn {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.counter-btn.increment {
+  background-color: #22c55e;
+  color: white;
+}
+
+.counter-btn.decrement {
+  background-color: #ef4444;
+  color: white;
+}
+
+.reset-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.counter-btn:hover:not(.disabled),
+.reset-btn:hover:not(.disabled) {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Active Effects */
+.counter-btn:active:not(.disabled),
+.reset-btn:active:not(.disabled) {
+  transform: scale(0.95);
+}
+
+/* Disabled State Styles */
+.counter-btn.disabled,
+.reset-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .counter-container {
+    min-width: auto;
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .counter-title {
+    font-size: 2rem;
+  }
+
+  .counter-value {
+    font-size: 3rem;
+  }
+
+  .counter-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}

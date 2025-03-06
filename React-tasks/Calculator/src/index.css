@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: linear-gradient(to right, rgba(130, 196, 115, 0.8), rgb(255, 116, 116, 0.8));
+}
+
+/* Main Layout */
+.calculator-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calculator-container {
+  background-color: #2d2d2d;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Title Styles */
+.calculator-title {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Input Styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.input-field::placeholder {
+  color: #a0aec0;
+}
+
+/* Operations Styles */
+.operations-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.operation-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.operation-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.operation-btn:active {
+  transform: translateY(0);
+}
+
+/* Result Styles */
+.result-container {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.result-text {
+  text-align: center;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.result-value {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-left: 0.5rem;
+}
+
+/* Reset Button Styles */
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .calculator-container {
+    padding: 1.5rem;
+  }
+
+  .calculator-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .operations-container {
+    gap: 0.5rem;
+  }
+
+  .operation-btn {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+  }
+}
