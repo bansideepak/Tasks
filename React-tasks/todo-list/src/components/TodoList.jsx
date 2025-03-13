@@ -25,12 +25,12 @@ function TodoList() {
     }
   };
 
-  function handleSubmit() {
+  const handleSubmit = () => {
     if (inputValue.trim() !== "") {
       setItems([...items, inputValue]);
       setInputValue("");
     }
-  }
+  };
 
   return (
     <div className="todo-wrapper">
