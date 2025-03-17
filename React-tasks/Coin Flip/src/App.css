@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica, sans-serif;
-  background: linear-gradient(to right, rgba(130, 196, 115, 0.8), rgb(255, 116, 116, 0.8));
+  background: linear-gradient(to right, #82c473cc, rgb(255, 116, 116, 0.8));
 }
 
 .app {
@@ -54,12 +54,12 @@ h1 {
 }
 
 .heads {
-  background: linear-gradient(45deg, #1f9bc8, #6baac1);
+  background: #82c473cc;
   transform: rotateY(0deg);
 }
 
 .tails {
-  background: linear-gradient(45deg, #c0c0c0, #a0a0a0);
+  background: #ff7474cc;
   transform: rotateY(180deg);
 }
 

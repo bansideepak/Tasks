@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Coin Toss</h1>
+      <h1>Coin Flip</h1>
 
       <CoinDisplay result={result} isFlipping={isFlipping} />
 
