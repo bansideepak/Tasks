@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background: #333;
+}
+
+h1 {
+  font-family: monospace;
+}
+
+.container {
+  max-width: 500px;
+  min-height: 250px;
+  background: #74c7f1;
+  margin: 120px auto;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+li,
+p {
+  font-family: monospace;
+  font-size: 15px;
+}
