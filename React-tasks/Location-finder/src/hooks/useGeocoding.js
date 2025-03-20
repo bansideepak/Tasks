@@ -159,7 +159,7 @@ const useGeocoding = () => {
         // Create a more descriptive name if available
         let displayName = place.tags.name || type;
 
-        // Add additional relevant information
+        // additional relevant information
         const additionalInfo = [];
         if (place.tags.cuisine) {
           additionalInfo.push(

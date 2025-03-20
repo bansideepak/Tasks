@@ -18,7 +18,7 @@ const LocationCard = ({
   onClick,
   showDistance = false,
 }) => {
-  // Choose icon based on the type of location
+  // icon based on the type of location
   const getIcon = (type) => {
     switch (type?.toLowerCase()) {
       case "residential":
@@ -71,11 +71,12 @@ const LocationCard = ({
       <div className="location-card-footer">
         <div className="location-card-type">
           {getIcon(placeType)}
-          {/* Fixed span element with improved styling for visibility */}
+
+          {/* Fixed span element */}
           <span
             className="capitalize"
             style={{
-              color: "var(--color-text-secondary)", // Uses theme variable for consistency
+              color: "var(--color-text-secondary)",
               backgroundColor: "var(--color-background-secondary)",
               padding: "0.15rem 0.5rem",
               borderRadius: "4px",
@@ -102,7 +103,7 @@ const LocationCard = ({
             <p
               key={index}
               className="location-detail-item"
-              style={{ color: "var(--color-text-secondary)" }} // Ensures visibility in all themes
+              style={{ color: "var(--color-text-secondary)" }}
             >
               {info}
             </p>

@@ -15,40 +15,34 @@ const SearchBar = ({
   const inputRef = useRef(null);
   const suggestionRef = useRef(null);
 
-  // Handle input change - update query and trigger suggestions
   const handleInputChange = (e) => {
     const value = e.target.value;
     setQuery(value);
     onTyping(value);
   };
 
-  // Handle form submission - trigger search
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
       onSearch(query);
       clearSuggestions();
-      // Don't clear query after search
     }
   };
 
-  // Handle suggestion click
   const handleSuggestionClick = (suggestion) => {
     setQuery(suggestion.display_name);
     onSelectSuggestion(suggestion);
     clearSuggestions();
-    // Focus back on the input after selection
+
     inputRef.current?.focus();
   };
 
-  // Clear the search input
   const handleClearSearch = () => {
     setQuery("");
     clearSuggestions();
     inputRef.current?.focus();
   };
 
-  // Close suggestions when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -104,6 +98,7 @@ const SearchBar = ({
       </form>
 
       {/* Suggestions dropdown */}
+
       {isFocused && suggestions.length > 0 && (
         <div className="suggestions-dropdown" ref={suggestionRef}>
           {suggestionsLoading ? (

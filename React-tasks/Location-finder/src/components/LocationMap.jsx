@@ -10,16 +10,20 @@ const LocationMap = ({ location }) => {
     );
   }
 
-  // The key change is adding a proper zoom level (zoom=12)
-  const openStreetMapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${
-    location.longitude - 0.1
-  }%2C${location.latitude - 0.1}%2C${location.longitude + 0.1}%2C${
-    location.latitude + 0.1
-  }&layer=mapnik&marker=${location.latitude}%2C${location.longitude}&zoom=12`;
+  const zoomLevel = location.distance !== undefined ? 18 : 16;
 
-  // For the "View in Google Maps" button
+  const openStreetMapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${
+    parseFloat(location.longitude) - 0.002
+  }%2C${parseFloat(location.latitude) - 0.002}%2C${
+    parseFloat(location.longitude) + 0.002
+  }%2C${parseFloat(location.latitude) + 0.002}&layer=mapnik&marker=${
+    location.latitude
+  }%2C${location.longitude}`;
+
+  // for "View in Google Maps" button
+
   const placeName = encodeURIComponent(
-    location.name || location.display_name.split(",")[0]
+    location.name || location.display_name.split(",")[0] || "location"
   );
   const googleMapsViewUrl = `https://www.google.com/maps/search/?api=1&query=${placeName}`;
 

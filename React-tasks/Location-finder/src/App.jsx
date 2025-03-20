@@ -28,17 +28,14 @@ function App() {
     setSuggestions,
   } = useGeocoding();
 
-  // For mobile view, track when to show details instead of search results
   const [showDetails, setShowDetails] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Handle window resize for responsive layout
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth <= 768;
       setIsMobile(mobile);
 
-      // Reset details view when switching from mobile to desktop
       if (!mobile && showDetails) {
         setShowDetails(false);
       }
@@ -48,27 +45,21 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, [showDetails]);
 
-  // Handle location selection
   const handleLocationSelect = (location) => {
     setSelectedLocation(location);
 
-    // On mobile, switch to details view after selecting a location
     if (isMobile) {
       setShowDetails(true);
     }
   };
-
-  // Function to go back to results on mobile
   const handleBackToResults = () => {
     setShowDetails(false);
   };
 
-  // Handle suggestion selection
   const handleSuggestionSelect = (suggestion) => {
     setSelectedLocation(suggestion);
     searchLocations(suggestion.display_name);
 
-    // On mobile, switch to details view after selecting a suggestion
     if (isMobile) {
       setShowDetails(true);
     }
@@ -252,7 +243,7 @@ function App() {
                 </div>
               </div>
 
-              {/* Map and Details Column - Full width on mobile when details are shown */}
+              {/* Map and Details Column */}
               <div
                 className={`space-y-6 ${
                   !showDetails && isMobile && results.length > 0 ? "hidden" : ""

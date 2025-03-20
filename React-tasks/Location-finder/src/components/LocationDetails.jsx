@@ -6,7 +6,6 @@ const LocationDetails = ({ location }) => {
 
   const placeName = location.name || location.display_name.split(",")[0];
 
-  // Build a Google Maps URL for the view button
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     placeName
   )}`;
