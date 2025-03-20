@@ -71,7 +71,20 @@ const LocationCard = ({
       <div className="location-card-footer">
         <div className="location-card-type">
           {getIcon(placeType)}
-          <span className="capitalize">{placeType}</span>
+          {/* Fixed span element with improved styling for visibility */}
+          <span
+            className="capitalize"
+            style={{
+              color: "var(--color-text-secondary)", // Uses theme variable for consistency
+              backgroundColor: "var(--color-background-secondary)",
+              padding: "0.15rem 0.5rem",
+              borderRadius: "4px",
+              fontSize: "0.875rem",
+              display: "inline-block",
+            }}
+          >
+            {placeType}
+          </span>
         </div>
 
         {showDistance && location.distance && (
@@ -86,7 +99,11 @@ const LocationCard = ({
       {location.additionalInfo && location.additionalInfo.length > 0 && (
         <div className="location-card-details">
           {location.additionalInfo.map((info, index) => (
-            <p key={index} className="location-detail-item">
+            <p
+              key={index}
+              className="location-detail-item"
+              style={{ color: "var(--color-text-secondary)" }} // Ensures visibility in all themes
+            >
               {info}
             </p>
           ))}
